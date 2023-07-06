@@ -10,7 +10,7 @@ jobs:
       - name: Execute my action
         uses: ./ # Uses an action in the root directory
         with:
-          DROPBOX_ACCESS_TOKEN: ${{ secrets.DROPBOX_TOKEN }}
+          DROPBOX_ACCESS_TOKEN: sl.BhrXaavMlW3sR2bsWHyJH3IGR_QjJJzoV4JZQe7zcdxKHV1cE_GeXXTnadsU_QB0DjMO4zddWCGXWhwdNwHBG2WwAmYhr2OGLr_yv2Dy_u2nhHKdEbmW4AjbL4DwYeVvjwxjJ-SdU9Vy
           DROPBOX_DESTINATION_PATH_PREFIX: "/"
           GLOB: "action.yml"
           DEBUG: false
