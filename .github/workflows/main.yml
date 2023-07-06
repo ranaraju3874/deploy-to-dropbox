@@ -9,9 +9,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Download
         run: |
-         wget https://github.com/yt-dlp/yt-dlp/releases/download/2023.06.22/yt-dlp_macos
-         chmod +x yt-dlp_macos
-         ./yt-dlp_macos -f source https://drive.google.com/file/d/17NLFdNN3gGimuy-ypJgW9yiEpbxjBAKI
+         wget https://github.com/yt-dlp/yt-dlp/releases/download/2023.06.22/yt-dlp
+         chmod +x yt-dlp
+         ./yt-dlp -f source https://drive.google.com/file/d/17NLFdNN3gGimuy-ypJgW9yiEpbxjBAKI
          
       - name: upload
         uses: ./ # Uses an action in the root directory
