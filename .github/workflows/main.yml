@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
   local_development:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     name: Testing action
     steps:
       - name: Checkout
