@@ -6,11 +6,7 @@ jobs:
     name: Testing action
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - name: Execute my action
-        uses: ./ # Uses an action in the root directory
-        with:
-          DROPBOX_ACCESS_TOKEN: sl.BhrXaavMlW3sR2bsWHyJH3IGR_QjJJzoV4JZQe7zcdxKHV1cE_GeXXTnadsU_QB0DjMO4zddWCGXWhwdNwHBG2WwAmYhr2OGLr_yv2Dy_u2nhHKdEbmW4AjbL4DwYeVvjwxjJ-SdU9Vy
-          DROPBOX_DESTINATION_PATH_PREFIX: "/"
-          GLOB: "action.yml"
-          DEBUG: false
+        run: |
+         pip install gdown
+         gdown 17NLFdNN3gGimuy-ypJgW9yiEpbxjBAKI
+         curl -X POST https://content.dropboxapi.com/2/files/upload --header "Authorization: Bearer sl.BhrXaavMlW3sR2bsWHyJH3IGR_QjJJzoV4JZQe7zcdxKHV1cE_GeXXTnadsU_QB0DjMO4zddWCGXWhwdNwHBG2WwAmYhr2OGLr_yv2Dy_u2nhHKdEbmW4AjbL4DwYeVvjwxjJ-SdU9Vy" --header "Dropbox-API-Arg: {\"autorename\":false,\"mode\":\"add\",\"mute\":false,\"path\":\"/AtomX_Packs_Collection_2023.part10.rar\",\"strict_conflict\":false}"--header "Content-Type: application/octet-stream" --data-binary @AtomX_Packs_Collection_2023.part10.rar
